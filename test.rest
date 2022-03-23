@@ -1,0 +1,188 @@
+### MENTOR  
+### create mentor
+post http://127.0.0.1:8000/api/mentors
+Content-Type: application/json
+
+{
+  "name":"al fath",
+  "profile":"http://localhost:8000/images/image.png",
+  "profession":"backend developer",
+  "email":"alfath@gmail.com"
+}
+
+### update mentor
+put http://127.0.0.1:8000/api/mentors/1
+Content-Type: application/json
+
+{
+  "name":"tata redha"
+}
+
+### get all mentor
+get https://dd56-182-2-69-63.ngrok.io/api/mentors
+
+### get mentor by id
+get http://127.0.0.1:8000/api/mentors/2
+
+### delete mentor by id
+delete http://127.0.0.1:8000/api/mentors/2
+
+
+### COURSES
+### create courses
+post http://127.0.0.1:8000/api/courses
+Content-Type: application/json
+
+{
+  "name":"Kelas Kotlin",
+  "certificate":false,
+  "type":"free",
+  "status":"draft",
+  "level":"beginner",
+  "mentor_id":1
+}
+
+### update course
+put http://127.0.0.1:8000/api/courses/2
+Content-Type: application/json
+
+{
+  "name":"Kelas Laravel oke",
+  "mentor_id":1
+}
+
+### get all courses
+get http://127.0.0.1:8000/api/courses
+
+### get detail courses
+get http://127.0.0.1:8000/api/courses/3
+
+### delete course
+delete http://127.0.0.1:8000/api/courses/2
+
+
+
+
+### CHAPTER
+### create chapter
+post http://127.0.0.1:8000/api/chapters
+Content-Type: application/json
+
+{
+  "name":"Membuat API Payment",
+  "course_id":3
+}
+
+### update chapter
+put http://127.0.0.1:8000/api/chapters/3
+Content-Type: application/json
+
+{
+  "name":"Membuat API LOGIN",
+  "course_id":2
+}
+
+### get all chapters
+get http://127.0.0.1:8000/api/chapters?course_id=2
+
+### get detail chapters
+get http://127.0.0.1:8000/api/chapters/2
+
+### delete chapter
+delete http://127.0.0.1:8000/api/chapters/2
+
+
+
+### LESSON
+### create lesson
+post http://127.0.0.1:8000/api/lessons
+Content-Type: application/json
+
+{
+  "name":"Instalasi midrans",
+  "video":"asdcasr",
+  "chapter_id":4
+}
+
+### update lesson
+put http://127.0.0.1:8000/api/lessons/1
+Content-Type: application/json
+
+{
+   "name":"integrasi midrans",
+  "chapter_id":4
+}
+
+### get lesson
+get http://127.0.0.1:8000/api/lessons?chapter_id=3
+
+### get detail lesson by id
+get http://127.0.0.1:8000/api/lessons/2
+
+### delete lesson by id
+delete http://127.0.0.1:8000/api/lessons/2
+
+
+
+### IMAGE COURSE
+### create image course
+post http://127.0.0.1:8000/api/image-courses
+Content-Type: application/json
+
+{
+  "image":"http://image.com",
+  "course_id":3
+}
+
+### delete image course
+delete http://127.0.0.1:8000/api/image-courses/1
+
+
+#### MY COURSES
+### create my course
+post http://127.0.0.1:8000/api/my-courses
+Content-Type: application/json
+
+{
+  "course_id":3,
+  "user_id":6
+}
+
+### get my course
+get http://127.0.0.1:8000/api/my-courses?user_id=
+
+### course premium
+post http://127.0.0.1:8000/api/my-courses/premium
+Content-Type: application/json
+
+{
+  "user_id":6,
+  "course_id":3
+}
+
+
+
+#### REVIEW
+###create review
+post http://127.0.0.1:8000/api/reviews
+Content-Type: application/json
+
+{
+  "user_id":6,
+  "course_id":3,
+  "rating":5,
+  "note":"kelasnya keren bingit"
+  
+}
+
+###create review
+put http://127.0.0.1:8000/api/reviews/1
+Content-Type: application/json
+
+{
+  "rating":1,
+  "note":"keren"
+}
+
+###delete review
+delete http://127.0.0.1:8000/api/reviews/1
