@@ -61,7 +61,7 @@ class MyCoursesController extends Controller
         if ($isExistMyCourse) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'user already teken this course'
+                'message' => 'user already taken this course'
             ], 409);
         }
 

@@ -48,14 +48,14 @@ class ImageCourseController extends Controller
         if (!$imageCourse) {
             return response()->json([
                 'status' => 'error',
-                'messag' => 'Image Course not found'
+                'message' => 'Image Course not found'
             ], 404);
         }
 
         $imageCourse->delete();
         return response()->json([
             'status' => 'success',
-            'messag' => 'Image Course Deleted'
+            'message' => 'Image Course Deleted'
         ]);
     }
 }

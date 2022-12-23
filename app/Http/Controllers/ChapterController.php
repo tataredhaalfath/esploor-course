@@ -73,7 +73,7 @@ class ChapterController extends Controller
         $chapter = Chapter::create($data);
 
         return response()->json([
-            'status' => 'error',
+            'status' => 'success',
             'data' => $chapter
         ]);
     }
