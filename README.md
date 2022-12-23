@@ -48,6 +48,7 @@
 - [Create new courses](#create-new-courses)
 - [Update Coures](#update-courses)
 - [Get All Courses](#get-all-courses)
+- [Get Detail Courses](#get-detail-courses)
 - [Delete Courses](#delete-courses)
 
 ### CHAPTER
